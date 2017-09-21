@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React  from 'react'
 import './App.css'
-import {BrowserRouter, Route} from 'react-router-dom'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import NavigationBar from './Components/NavigationBar'
 import Main from './Components/Main'
 import Footer from './Components/Footer'
@@ -9,7 +9,9 @@ import Footer from './Components/Footer'
 const App = () => (
   <div>
     <NavigationBar/>
+        <MuiThemeProvider>
     <Main />
+     </MuiThemeProvider>
     <Footer />
   </div>
 )
