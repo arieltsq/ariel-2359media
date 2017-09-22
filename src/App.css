@@ -40,16 +40,27 @@ body {
     margin: 5px !important
 
   }
+
+    .grid-title > div  {
+      width: 100% !important;
+      height: 100% !important;
+      padding: 2px !important;
+    }
   .grid-title{
     width: 100% !important;
     height: 100% !important;
   }
+  .grid-title div >  div {
+    background: none !important;
+  }
+  .grid-title div div img{
+    width: 100% !important;
+    height: 200px !important;
+  }
 
 }
 @media (min-width:480px)  { /* smartphones, Android phones, landscape iPhone */
-.card-image {
 
-}
   .grid-list > div{
     width: 276px !important;
     height: 200px !important;
