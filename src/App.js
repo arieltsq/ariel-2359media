@@ -8,10 +8,12 @@ import Footer from './Components/Footer'
 
 const App = () => (
   <div>
-    <NavigationBar/>
-        <MuiThemeProvider>
-    <Main />
-     </MuiThemeProvider>
+    <MuiThemeProvider>
+      <div>
+      <NavigationBar/>
+      <Main />
+      </div>
+    </MuiThemeProvider>
     <Footer />
   </div>
 )

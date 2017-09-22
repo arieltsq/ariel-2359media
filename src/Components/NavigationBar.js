@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import {Nav,Navbar, NavItem, MenuItem} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
+import Badge from 'material-ui/Badge';
+import NotificationsIcon from 'material-ui/svg-icons/social/notifications';
+import ReactHoverObserver from 'react-hover-observer';
+ 
 class NavigationBar extends Component {
 
 
@@ -20,10 +24,13 @@ class NavigationBar extends Component {
             <Nav>
               {/*changed NavItem to Li as NavItem does not work when Navbar.Collapse is used. Refer to https://github.com/react-bootstrap/react-bootstrap/issues/2365 */}
               <li role="presentation"><a href="/search">Search</a></li>
-              <li role="presentation"><a href="/favourites">Favourites</a></li>
+              <li role="presentation">
+                  <a href="/favourites">Favourites</a>
+              </li>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
+
       </div>
     );
   }

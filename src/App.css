@@ -15,7 +15,7 @@ body {
   bottom: 0;
   width: 100%;
   background-color: #f5f5f5;
-font-size: 10px;
+  font-size: 10px;
 }
 /*For NavigationBar*/
 .navbar-nav li a{
@@ -23,34 +23,73 @@ font-size: 10px;
 }
 
 @media (min-width:320px)  {
- /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
- .footer {
-   height: auto;
-   line-height: 30px; /* Vertically center the text there */
- }
- .grid-list{
-width:300px !important;
-height: 300px !important;
-   }
+  /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+  .footer {
+    height: auto;
+    line-height: 30px; /* Vertically center the text there */
+  }
+  .grid-list{
+    width:auto !important;
+    height: 100% !important;
+    margin: 0 auto;
+    margin-bottom: 100px !important;
+  }
+  .grid-list > div{
+    width: 100% !important;
+    height: 100% !important;
+    margin: 5px !important
+
+  }
+  .grid-title{
+    width: 100% !important;
+    height: 100% !important;
+  }
+
 }
 @media (min-width:480px)  { /* smartphones, Android phones, landscape iPhone */
-  .grid-list{
-  width: 100% !important;
-  height: 400px !important;
+.card-image {
 
-    }
+}
+  .grid-list > div{
+    width: 276px !important;
+    height: 200px !important;
+    margin: 0px !important;
+  }
+  .grid-title{
+    width: 276px !important;
+    height: 200px !important;
+  }
+
+  .grid-title > div  {
+    width: 100% !important;
+    height: 100% !important;
+    padding: 2px !important;
+  }
+  .grid-title div >  div {
+    background: none !important;
+  }
+  .grid-title div div img{
+    width: 100% !important;
+    height: 200px !important;
+  }
+  .card-media-overlay {
+    margin-right: 20px;
+  }
+
+
+
 }
 @media (min-width:600px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
 
 }
 @media (min-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
 
-  }
-@media (min-width:1025px) {
-/* big landscape tablets, laptops, and desktops */
-.footer {
-  height: auto;
-  line-height: 60px; /* Vertically center the text there */
 }
+@media (min-width:1025px) {
+  /* big landscape tablets, laptops, and desktops */
+  .footer {
+    height: auto;
+    line-height: 60px; /* Vertically center the text there */
+  }
 }
 @media (min-width:1281px) { /* hi-res laptops and desktops */ }
