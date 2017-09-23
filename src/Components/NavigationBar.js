@@ -1,15 +1,9 @@
 import React, { Component } from 'react';
-import {Nav,Navbar, NavItem, MenuItem} from 'react-bootstrap'
-import {Link} from 'react-router-dom'
-import Badge from 'material-ui/Badge';
-import NotificationsIcon from 'material-ui/svg-icons/social/notifications';
-import ReactHoverObserver from 'react-hover-observer';
+import {Nav,Navbar} from 'react-bootstrap'
+// import {Link} from 'react-router-dom'
 
 class NavigationBar extends Component {
-
-
   render() {
-
     return (
       <div className="NavigationBar">
 
@@ -30,7 +24,6 @@ class NavigationBar extends Component {
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-
       </div>
     );
   }

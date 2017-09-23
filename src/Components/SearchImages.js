@@ -5,11 +5,9 @@ import TextField from 'material-ui/TextField';
 // import { Request, Get, withAxios } from 'react-axios'
 import axios from 'axios'
 import Snackbar from 'material-ui/Snackbar';
-// import FavoritesIcon from 'material-ui/svg-icons/action/favorite';
-import FavoritesIconBorder from 'material-ui/svg-icons/action/favorite-border';
-import {red500} from 'material-ui/styles/colors';
+
 import {GridList, GridTile} from 'material-ui/GridList';
-import {Card,  CardMedia} from 'material-ui/Card';
+import {Card} from 'material-ui/Card';
 
 
 const styles = {
@@ -36,7 +34,7 @@ class SearchImages extends Component {
       error: false,
       onClickImage: false,
       favoriteImages: [],
-    show: false
+      show: false
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleMouseClick = this.handleMouseClick.bind(this);
@@ -60,7 +58,7 @@ class SearchImages extends Component {
     var truncateSearch =search.split(' ').join('+');
     console.log(truncateSearch)
     this.setState({open: true,});
-    axios.get('http://api.giphy.com/v1/gifs/search', {
+    axios.get('https://api.giphy.com/v1/gifs/search', {
       params: {
         api_key: 'pQoWwD0Oh00dkH2Xrd1VOoo0IDKUcY5K',
         q: truncateSearch,
@@ -80,7 +78,7 @@ class SearchImages extends Component {
     console.log(`${value} clicked`)
     this.setState({onClickImage: true})
     console.log(this.state.favoriteImages)
-
+    // to compare the id of the images fetched and the images being clicked.
     // const nextState =  this.state.searchResults.map((image) =>{
     //   if(image.id === value){
     //     return console.log("check if", value, "existed")
@@ -98,7 +96,7 @@ class SearchImages extends Component {
         <div className="container">
           <div className="container-fluid">
 
-            <TextField style={{ fontSize: '20px' }} hintText="Start searching for images!" fullWidth={true} onChange={this.handleChange} />
+            <TextField className="text-searchbox" hintText="Start searching for images!" fullWidth={true} onChange={this.handleChange} />
           </div>
           <div className="container-fluid">
             { this.state.error ?
@@ -106,14 +104,13 @@ class SearchImages extends Component {
                 <div style={styles.root}>
                   <GridList style={styles.gridList} cols={4}  className="grid-list">
                     { this.state.searchResults.map((search) => (
-                      <Card className="card-images">
+                      <Card className="card-images"       key={'images' + search.id}>
                         <GridTile className="grid-title"
-                          key={search.id} onClick={() =>this.handleMouseClick(search.id)} onMouseEnter={this.onMouseover.bind(this)}
-                              onMouseLeave={this.onMouseout.bind(this)}
+                          onClick={() =>this.handleMouseClick(search.id)} onMouseEnter={this.onMouseover.bind(this)}
+                          onMouseLeave={this.onMouseout.bind(this)}
                           >
-                      <Images url={search.images.fixed_width_downsampled.url} showIcon={this.state.show}
-A/>
-
+                          <Images url={search.images.fixed_height_downsampled.url} showIcon={this.state.show}
+                            A/>
                         </GridTile>}
                       </Card>
                     ))}

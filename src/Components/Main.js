@@ -3,6 +3,8 @@ import { Switch, Route} from 'react-router-dom'
 import SearchImages from './SearchImages'
 import Favourites from './Favourites'
 
+// Acts like routes
+
 const Main = () => (
   <div>
     <Switch>
