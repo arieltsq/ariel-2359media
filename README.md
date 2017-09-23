@@ -1,3 +1,6 @@
+TLDR: This was build for a React.js Front-end test
+
+Link to view the actual site: [Ariel-2359 on Heroku](https://ariel-2359media.herokuapp.com)
 ##
 ```
 npm install
@@ -32,11 +35,11 @@ npm run start
 ##### Wireframes
 - Tried to structured my thoughts around these wireframes to help me structure my code out
 
-![Web wireframe](https://ariel-2359media.herokuapp.com/web-wireframe.jpg "Web-wireframe")
+![Web wireframe](https://ariel-2359media.herokuapp.com/web-wireframe.JPG "Web-wireframe")
 Wireframe that I first drew for illustration purposes
 
-![Hovering States](https://ariel-2359media.herokuapp.com/hovering-states.jpg "Hovering states")
+![Hovering States](https://ariel-2359media.herokuapp.com/hovering-states.JPG "Hovering states")
 Trying to map out my thoughts for the hovering states that were required
 
-![Data flow](https://ariel-2359media.herokuapp.com/data-flow.jpg "Data flow")
+![Data flow](https://ariel-2359media.herokuapp.com/data-flow.JPG "Data flow")
 Mapping out the data flow
